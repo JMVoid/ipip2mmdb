@@ -43,8 +43,8 @@ jobs:
           ./ipip2mmdb -s ./china_ip_list.txt -d Country.mmdb
       - name: Set env variables
         run: |
-          echo "::set-env name=RELEASE_NAME::Released on $(date +%Y%m%d)"
-          echo "::set-env name=TAG_NAME::$(date +%Y%m%d)"
+          echo "RELEASE_NAME=$(date +%Y%m%d)" >> $GITHUB_ENV
+          echo "TAG_NAME=$(date +%Y%m%d)" >> $GITHUB_ENV
         shell: bash
 
       - name: Generate version file
