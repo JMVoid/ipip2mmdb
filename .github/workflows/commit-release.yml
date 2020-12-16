@@ -4,8 +4,8 @@ on:
   push:
 #    branches: [ master ]
 #    disabled push commit
-  branches-ignore:
-    - '**'
+    branches-ignore:
+      - '**'
 
 jobs:
   build:
